@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:leonardo",
+    "sketch": "keyboard-test\\keyboard-test.ino",
+    "port": "COM6"
+}
