@@ -28,17 +28,19 @@ void setup()
 void loop()
 {
   bool isRunning = false;
-  int arrSize = sizeof(comments);
+  // int arrSize = sizeof(char*); // size of a pointer is 2 bytes on Arduino
+  int arrSize = sizeof(comments) / 2; //remember, comments is an array of pointers.
   if(digitalRead(buttonPin) == LOW && !isRunning) 
   {
     
     isRunning = true;
     
     Keyboard.begin();
-    delay(3000);
+    delay(1000);
 
     for(int i = 0; i < arrSize; i++) {
-      delay(2000);
+      delay(1000);
+      // Keyboard.println(arrSize);
       Keyboard.println(comments[i]);
     }
     delay(1000);
